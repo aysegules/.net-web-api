@@ -1,0 +1,43 @@
+@ProductHandler_HostAddress = http://localhost:5220
+@ProductHandler_Version = /api/v1
+
+GET {{ProductHandler_HostAddress}}{{ProductHandler_Version}}/product/
+Accept: application/json
+
+###
+
+GET {{ProductHandler_HostAddress}}{{ProductHandler_Version}}/product/1
+Accept: application/json
+
+###
+
+POST {{ProductHandler_HostAddress}}{{ProductHandler_Version}}/product/
+Content-Type: application/json
+
+{
+  "productName": "Product7",
+  "unitPrice": 30,
+  "stockQuantity": 50,
+  "supplierName": "SupplierB",
+  "weight": 2.50
+}
+
+###
+
+PUT {{ProductHandler_HostAddress}}{{ProductHandler_Version}}/product/10
+Content-Type: application/json
+
+{
+    "productName": "Product7",
+    "unitPrice": 20,
+    "stockQuantity": 100,
+    "supplierName": "SupplierB",
+    "weight": 2.75
+}
+
+###
+
+DELETE {{ProductHandler_HostAddress}}{{ProductHandler_Version}}/product/6
+Accept: application/json
+
+###

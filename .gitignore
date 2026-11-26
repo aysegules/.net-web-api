@@ -1,0 +1,15 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.csproj.user
+
+# Local configuration and secrets
+.env
+.env.*
+secrets.json
+appsettings.Local.json
